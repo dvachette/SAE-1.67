@@ -5,11 +5,79 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil - Projet R</title>
         <link rel="stylesheet" href="./static/styles/styles.css">
+        <link rel="stylesheet" href="./static/styles/header.css">
         <link rel="stylesheet" href="./static/styles/index.css">
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Projet R</h1>
-        <p>Bienvenue sur le projet R !</p>
-        <a href="login.html">Se connecter</a>
+        <div class="header">
+            <nav>
+                <div class="nav-left">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Les malfaiteurs
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./chef.html">Le chef</a></li>
+                            <li><a href="./sous-fifres.html">Les sous-fifres</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Leurs méfaits
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./journal.html">Journal</a></li>
+                            <li><a href="./signaler-mefait.html">Signaler un méfait</a></li>
+                            <li><a href="./carte-kanto.html">Carte de Kanto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/" class="nav-logo">
+                    <img src="./static/images/logo.png" alt="Logo" class="logo">
+                </a>
+                <div class="nav-right">
+                    <a href="./recompenses.html" class="nav-btn">Récompenses</a>
+                    <a href="./equipe-ultime.html" class="nav-btn">L'équipe ultime</a>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="hero-tag">ALERTE</span>
+                    <h1>La Team Rocket est de retour !</h1>
+                    <p>Afin de prévenir d’une nouvelle attaque de la Team Rocket, la région de Kanto régie par le professeur Chen met en place une stratégie pour faire cesser les activités de la Team Rocket.</p>
+                    <a href="#knowledge"></a>
+                </div>
+                <div class="hero-image">
+                    <img src="./static/images/hero-image.png" alt="Team Rocket">
+                </div>
+            </section>
+            <section class="knowledge">
+                <h2>Que faut-il savoir ?</h2>
+                <p>Le Professeur Chen a rassemblé toutes les informations essentielles pour comprendre la menace que représente la Team Rocket. Consultez chaque section pour être prêt à défendre Kanto.</p>
+                <div class="knowledge-cards">
+                    <div class="card">
+                        <h3>Les malfaiteurs</h3>
+                        <p>Le Professeur Chen a rassemblé toutes les informations essentielles pour comprendre la menace que représente la Team Rocket. Consultez chaque section pour être prêt à défendre Kanto.</p>
+                        <a href="#">Découvrir</a>
+                    </div>
+                    <div class="card">
+                        <h3>Leurs méfaits</h3>
+                        <p>Vols de Pokémon, sabotages, attaques de dresseurs... Retrouvez ici le bilan des crimes commis par la Team Rocket à travers toute la région.</p>
+                        <a href="#">Découvrir</a>
+                    </div>
+                    <div class="card">
+                        <h3>L’Équipe Ultime</h3>
+                        <p>Le Professeur Chen a sélectionné une équipe Pokémon capable de contrer chaque membre de la Team Rocket. Découvrez la stratégie.</p>
+                        <a href="#">Découvrir</a>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

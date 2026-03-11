@@ -1,0 +1,125 @@
+.header {
+    background: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+    width: 100%;
+}
+
+.header nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    gap: 50px;
+}
+
+.dropdown {
+    height: 100%;
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-toggle i {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    list-style: none;
+    display: none;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown ul li {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown ul li a {
+    
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-left,
+.nav-right {
+    height : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.nav-logo .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-btn {
+    position: relative;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.dropdown-toggle,
+.nav-btn,
+.dropdown ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--text-color);
+    letter-spacing: 6%;
+}
+
+.dropdown ul li:hover {
+    background-color: var(--primary-color);
+}
+
+.nav-right a::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+    transform-origin: left;
+}
+
+.nav-right a:hover::before {
+    width: 100%;
+    left: 0;
+    transform: right;
+}
