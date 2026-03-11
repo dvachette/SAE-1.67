@@ -1,0 +1,296 @@
+
+main {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.characters-wrapper {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    white-space: nowrap;
+}
+
+.title h1 {
+    color: var(--text-color);
+    font-size: 20px;
+    letter-spacing: 50%;
+    font-weight: 500;
+}
+
+.characters-container {
+    background-color: rgb(61, 61, 92, .5);
+    border: 10px solid var(--primary-color);
+    border-left: 0;
+}
+
+.characters-container .characters-cards {
+    display: flex;
+    justify-content: center;
+    padding: 30px 40px;
+    min-width: calc(3 * 380px + 6 * 30px + 2 * 40px);
+}
+
+.characters-container .characters-cards .card {
+    background-color: var(--background-color);
+    border: 5px solid var(--primary-color);
+    padding: 20px;
+    width: 380px;
+    height: 480px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1;
+    overflow: hidden;
+    margin: 0 30px;
+    transition: all .8s ease;
+}
+
+.characters-container .characters-cards .card .card-image {
+    height: 200px;
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 5px solid var(--primary-color);
+    background: linear-gradient(to bottom, var(--card-bg) 30%, rgba(0,0,0,0) 70%);
+    transition: all 0.8s ease;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.card .content h2 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card .content .role {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .content .apercu {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.card .content .details {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+}
+
+.card .content .details .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.card .content .details .tags .tag {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card .content .details .citation {
+    font-style: italic;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card .content .details .citation i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.card .content .details .stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card .content .details .stats-grid .stat-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .content .details .stats-grid .stat-label {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.card .content .details .stats-grid .bar {
+    flex: 1;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card .content .details .stats-grid .bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+    border-radius: 4px;
+}
+
+.card .content .details p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card .content .details .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.card .content .details .infos .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-size: 0.85rem;
+}
+
+.card .content .details .infos .info i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.card .content .details .infos .info strong {
+    color: var(--primary-color);
+}
+
+.card .content .pokemons {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.card .content .pokemons .pokemon-card {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card .content .pokemons .pokemon-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card .content .pokemons .pokemon-card span {
+    color: var(--text-color);
+    font-size: 0.7rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.characters-container .characters-cards .card:hover {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.characters-container .characters-cards .card:hover .card-image {
+    width: 250px;
+    min-width: 250px;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: 0;
+}
+
+.characters-container .characters-cards .card:hover .content {
+    text-align: left;
+    padding: 10px 20px;
+    justify-content: flex-start;
+}
+
+.characters-container .characters-cards .card:hover .content h2,
+.characters-container .characters-cards .card:hover .content .role,
+.characters-container .characters-cards .card:hover .content .apercu {
+    display: none;
+}
+
+.characters-container .characters-cards .card:hover .content .details {
+    display: flex;
+}
+
+.characters-cards:has(.card:hover) .card:not(:hover) {
+    width: 0;
+    min-width: 0;
+    padding: 20px 0;
+    border-left: none;
+    border-right: none;
+    opacity: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+.characters-cards .card:hover {
+    transition-delay: 0s;
+}
+
+.characters-cards .card:not(:hover) {
+    transition-delay: 0.1s;
+}
