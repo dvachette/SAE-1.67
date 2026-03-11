@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Projet R</title>
+    <link rel="stylesheet" href="./static/styles/styles.css">
+    <link rel="stylesheet" href="./static/styles/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PROJET</h1>
+        <img src="./static/images/logo.png" alt="Logo du projet" class="logo">
+        
+        <div class="login-container">
+            <h2>Se connecter</h2>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="character-layer">
+        <img src="./static/images/jessie-neon.png" alt="Personnage de Jessie" class="character">
+        <img src="./static/images/james-neon.png" alt="Personnage de James" class="character">
+    </div>
+</body>
+</html>
