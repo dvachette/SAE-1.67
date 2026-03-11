@@ -1,0 +1,111 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.hero-content span.hero-tag {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}   
+
+
+
+.knowledge {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.knowledge h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.knowledge p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.knowledge-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.knowledge-cards .card {
+    background-color: var(--primary-color);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.knowledge-cards .card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.knowledge-cards .card p {
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.knowledge-cards .card a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: var(--third-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
