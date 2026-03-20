@@ -10,6 +10,7 @@ main {
 
 .characters-wrapper {
     position: relative;
+    animation: slideLeft 2s ease;
 }
 
 .title {
@@ -35,6 +36,15 @@ main {
     background-color: rgb(61, 61, 92, .5);
     border: 10px solid var(--primary-color);
     border-left: 0;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .characters-container .characters-cards {
@@ -90,7 +100,7 @@ main {
 }
 
 .card .content .role {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -143,7 +153,7 @@ main {
 }
 
 .card .content .details .citation i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.2rem;
 }
 
@@ -176,7 +186,7 @@ main {
 
 .card .content .details .stats-grid .bar .fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+    background: linear-gradient(90deg, var(--secondary-color), #ff6b6b);
     border-radius: 4px;
 }
 
@@ -207,12 +217,12 @@ main {
 }
 
 .card .content .details .infos .info i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.1rem;
 }
 
 .card .content .details .infos .info strong {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .card .content .pokemons {

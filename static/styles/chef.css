@@ -1,0 +1,222 @@
+
+main {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chef-wrapper {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    white-space: nowrap;
+}
+
+.title h1 {
+    color: var(--text-color);
+    font-size: 20px;
+    letter-spacing: 50%;
+    font-weight: 500;
+}
+
+.chef-container {
+    background-color: rgb(61, 61, 92, .5);
+    border: 10px solid var(--primary-color);
+    border-left: 0;
+    padding: 30px 50px;
+    width: fit-content;
+}
+
+.chef-container h2 {
+    font-size: 28px;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 15px;
+    margin: 0 0 25px 0;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.chef-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: end;
+    min-height: 300px;
+}
+
+.chef-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    align-self: stretch;
+}
+
+.chef-infos .info-item {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.chef-infos .info-item .label {
+    font-weight: 700;
+}
+
+.chef-infos .info-item .value.danger {
+    color: var(--secondary-color);
+}
+
+.chef-infos .citation {
+    font-style: italic;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 6px 6px 0;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.chef-infos .citation i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.chef-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.chef-portrait .chef-image {
+    height: 320px;
+    object-fit: contain;
+    margin-bottom: -30px;
+}
+
+.chef-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.chef-details .detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chef-details .detail-section h3 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chef-details .pokemon-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.chef-details .pokemon-card {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.chef-details .pokemon-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.chef-details .crimes-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.chef-details .crimes-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    font-size: 0.85rem;
+}
+
+.chef-details .crimes-list li i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.chef-details .reward {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 6px;
+}
+
+.chef-details .reward i {
+    color: gold;
+    font-size: 1.5rem;
+}
+
+.chef-details .reward span {
+    color: gold;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.chef-details .warning-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    background-color: rgba(200, 50, 50, 0.2);
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.chef-details .warning-box i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.chef-details .warning-box span {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
