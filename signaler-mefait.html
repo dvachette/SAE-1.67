@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signaler un méfait - Projet R</title>
+        <link rel="stylesheet" href="./static/styles/styles.css">
+        <link rel="stylesheet" href="./static/styles/header.css">
+        <link rel="stylesheet" href="./static/styles/signaler-mefait.css">
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <div class="nav-left">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Les malfaiteurs
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./chef.html">Le chef</a></li>
+                            <li><a href="./sous-fifres.html">Les sous-fifres</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Leurs méfaits
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./journal.html">Journal</a></li>
+                            <li><a href="./signaler-mefait.html">Signaler un méfait</a></li>
+                            <li><a href="./carte-kanto.html">Carte de Kanto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/" class="nav-logo">
+                    <img src="./static/images/logo.png" alt="Logo" class="logo">
+                </a>
+                <div class="nav-right">
+                    <a href="./recompenses.html" class="nav-btn">Récompenses</a>
+                    <a href="./equipe-ultime.html" class="nav-btn">L'équipe ultime</a>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="report-wrapper" id="report-top">
+                <div class="title">
+                    <h1>Signaler un méfait</h1>
+                </div>
+                <section class="report-container">
+
+                    <!-- ══ FORMULAIRE ═══════════════════════════════ -->
+                    <div class="form-section">
+
+                        <div class="form-header">
+                            <h2>Soumettre un rapport</h2>
+                            <p>Vos informations contribuent directement à la lutte contre la Team Rocket. Tout signalement est traité sous 48h par l'Interpol Pokémon.</p>
+                        </div>
+
+                        <div class="form-notice">
+                            <i class="bx bx-shield-quarter"></i>
+                            <span>Votre signalement est traité en toute confidentialité. Vous pouvez rester anonyme.</span>
+                        </div>
+
+                        <!-- Type de méfait -->
+                        <div class="form-group">
+                            <label class="group-label">Type de méfait <span class="required">*</span></label>
+                            <div class="type-options">
+                                <input type="radio" name="type" id="type-vol">
+                                <label for="type-vol"><i class="bx bx-package"></i> Vol de Pokémon</label>
+
+                                <input type="radio" name="type" id="type-extorsion">
+                                <label for="type-extorsion"><i class="bx bx-coin"></i> Extorsion</label>
+
+                                <input type="radio" name="type" id="type-experience">
+                                <label for="type-experience"><i class="bx bx-dna"></i> Expérience illégale</label>
+
+                                <input type="radio" name="type" id="type-sabotage">
+                                <label for="type-sabotage"><i class="bx bx-wrench"></i> Sabotage</label>
+
+                                <input type="radio" name="type" id="type-autre">
+                                <label for="type-autre"><i class="bx bx-question-mark"></i> Autre</label>
+                            </div>
+                        </div>
+
+                        <!-- Lieu + Date -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lieu" class="group-label">Lieu de l'incident <span class="required">*</span></label>
+                                <input type="text" id="lieu" name="lieu" class="form-input" placeholder="Ex : Céladopole, Casino" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date" class="group-label">Date de l'incident</label>
+                                <input type="date" id="date" name="date" class="form-input">
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="description" class="group-label">Description de l'incident <span class="required">*</span></label>
+                            <textarea id="description" name="description" class="form-input form-textarea" placeholder="Décrivez les faits avec le plus de détails possible : heure, description des agents, méthodes utilisées..." required></textarea>
+                        </div>
+
+                        <!-- Dresseur + Niveau de danger -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dresseur" class="group-label">Votre nom de dresseur</label>
+                                <input type="text" id="dresseur" name="dresseur" class="form-input" placeholder="Anonyme si non renseigné">
+                            </div>
+                            <div class="form-group">
+                                <label class="group-label">Niveau de danger estimé</label>
+                                <div class="danger-options">
+                                    <input type="radio" name="danger" id="d-faible">
+                                    <label for="d-faible" class="danger-label danger-faible">Faible</label>
+
+                                    <input type="radio" name="danger" id="d-moyen">
+                                    <label for="d-moyen" class="danger-label danger-moyen">Moyen</label>
+
+                                    <input type="radio" name="danger" id="d-eleve">
+                                    <label for="d-eleve" class="danger-label danger-eleve">Élevé</label>
+
+                                    <input type="radio" name="danger" id="d-critique">
+                                    <label for="d-critique" class="danger-label danger-critique">Critique</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bouton d'envoi -->
+                        <a href="#success" class="submit-btn">
+                            <i class="bx bx-send"></i>
+                            Envoyer le signalement
+                        </a>
+
+                    </div>
+
+                    <!-- ══ ÉCRAN SUCCÈS ═══════════════════════════════ -->
+                    <div class="success-screen" id="success">
+                        <div class="success-icon">
+                            <i class="bx bx-check-circle"></i>
+                        </div>
+                        <h2>Signalement transmis !</h2>
+                        <p>Votre rapport a été enregistré et transmis aux équipes de l'Interpol Pokémon. Nous vous remercions de votre coopération dans la lutte contre la Team Rocket.</p>
+                        <div class="success-ref">
+                            <span>Référence :</span>
+                            <strong>RPT-2024-0892</strong>
+                        </div>
+                        <a href="#report-top" class="success-back">
+                            <i class="bx bx-refresh"></i> Soumettre un nouveau signalement
+                        </a>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

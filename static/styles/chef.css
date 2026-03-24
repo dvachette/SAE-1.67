@@ -1,222 +1,660 @@
+/* ══ BOSS PAGE - GIOVANNI ══════════════════════ */
 
 main {
-    padding-top: 80px;
+    padding-top: 60px;
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
-.chef-wrapper {
+.boss-page {
+    width: 100%;
+}
+
+/* ── Hero Section ───────────────────────────────── */
+
+.boss-hero {
     position: relative;
-}
-
-.title {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transform: rotate(90deg) translateY(-100%);
-    transform-origin: top left;
-    border-radius: 15px 15px 0 0;
-    background-color: var(--primary-color);
-    padding: 15px 30px;
-    white-space: nowrap;
-}
-
-.title h1 {
-    color: var(--text-color);
-    font-size: 20px;
-    letter-spacing: 50%;
-    font-weight: 500;
-}
-
-.chef-container {
-    background-color: rgb(61, 61, 92, .5);
-    border: 10px solid var(--primary-color);
-    border-left: 0;
-    padding: 30px 50px;
-    width: fit-content;
-}
-
-.chef-container h2 {
-    font-size: 28px;
-    border-bottom: 4px solid var(--primary-color);
-    padding-bottom: 15px;
-    margin: 0 0 25px 0;
-    color: var(--text-color);
-    font-weight: 700;
-}
-
-.chef-content {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 40px;
-    align-items: end;
-    min-height: 300px;
-}
-
-.chef-infos {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    align-self: stretch;
-}
-
-.chef-infos .info-item {
-    color: var(--text-color);
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.chef-infos .info-item .label {
-    font-weight: 700;
-}
-
-.chef-infos .info-item .value.danger {
-    color: var(--secondary-color);
-}
-
-.chef-infos .citation {
-    font-style: italic;
-    color: var(--text-color);
-    font-size: 0.9rem;
-    padding: 10px 12px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 3px solid var(--primary-color);
-    border-radius: 0 6px 6px 0;
-    margin: 0 0 10px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.chef-infos .citation i {
-    color: var(--secondary-color);
-    font-size: 1rem;
-}
-
-.chef-portrait {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.chef-portrait .chef-image {
-    height: 320px;
-    object-fit: contain;
-    margin-bottom: -30px;
-}
-
-.chef-details {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-self: stretch;
-}
-
-.chef-details .detail-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.chef-details .detail-section h3 {
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.chef-details .pokemon-grid {
-    display: flex;
-    gap: 10px;
-}
-
-.chef-details .pokemon-card {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
+    min-height: 70vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: linear-gradient(135deg, rgba(40, 10, 10, 0.95) 0%, rgba(20, 5, 5, 0.98) 50%, rgba(10, 0, 0, 1) 100%);
     overflow: hidden;
 }
 
-.chef-details .pokemon-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 80% 50%, rgba(218, 27, 27, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(100, 0, 50, 0.1) 0%, transparent 40%);
+    pointer-events: none;
 }
 
-.chef-details .crimes-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
 }
 
-.chef-details .crimes-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-color);
-    font-size: 0.85rem;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
 }
 
-.chef-details .crimes-list li i {
-    color: var(--secondary-color);
-    font-size: 1rem;
-}
-
-.chef-details .reward {
-    display: flex;
+.threat-indicator {
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 15px;
-    background-color: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.5);
-    border-radius: 6px;
+    padding: 8px 20px;
+    background-color: rgba(218, 27, 27, 0.2);
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    margin-bottom: 20px;
 }
 
-.chef-details .reward i {
-    color: gold;
-    font-size: 1.5rem;
+.threat-pulse {
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: threatPulse 1.5s ease-in-out infinite;
 }
 
-.chef-details .reward span {
-    color: gold;
-    font-size: 1.3rem;
+@keyframes threatPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(218, 27, 27, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(218, 27, 27, 0); }
+}
+
+.threat-text {
+    color: var(--secondary-color);
+    font-size: 0.75rem;
     font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.chef-details .warning-box {
+.boss-name {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--text-color);
+    margin: 0;
+    letter-spacing: 8px;
+    text-shadow: 0 0 60px rgba(218, 27, 27, 0.5);
+    line-height: 1;
+}
+
+.boss-title {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 15px 0 30px 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.boss-quote {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 20px 25px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 8px 8px 0;
+    margin: 0;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    padding: 12px;
-    background-color: rgba(200, 50, 50, 0.2);
-    border: 1px solid var(--primary-color);
-    border-radius: 6px;
+    gap: 12px;
 }
 
-.chef-details .warning-box i {
+.boss-quote i {
     color: var(--secondary-color);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
 }
 
-.chef-details .warning-box span {
+.hero-portrait {
+    position: relative;
+    z-index: 2;
+}
+
+.portrait-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(218, 27, 27, 0.3) 0%, transparent 70%);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.hero-portrait img {
+    position: relative;
+    height: 450px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(218, 27, 27, 0.4));
+}
+
+/* ── Stats Section ──────────────────────────────── */
+
+.boss-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 25px 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item i {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.stat-item .stat-value {
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--text-color);
+}
+
+.stat-item .stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stat-item.stat-danger {
+    background-color: rgba(218, 27, 27, 0.15);
+}
+
+.stat-item.stat-danger i,
+.stat-item.stat-danger .stat-value {
+    color: var(--secondary-color);
+}
+
+/* ── Content Section ────────────────────────────── */
+
+.boss-content {
+    padding: 50px 80px;
+    background: linear-gradient(180deg, rgba(20, 10, 10, 0.95) 0%, var(--background-color) 100%);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.info-card h3 i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+.info-value {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.info-value.classified {
+    color: var(--secondary-color);
+    background-color: rgba(218, 27, 27, 0.15);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.info-value.danger {
+    color: var(--secondary-color);
     font-size: 0.8rem;
-    line-height: 1.4;
+}
+
+.crimes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.crimes-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(218, 27, 27, 0.08);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 0 8px 8px 0;
+}
+
+.crimes-list li i {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.crimes-list li div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.crimes-list li strong {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.crimes-list li span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+/* ── Pokemon Showcase ───────────────────────────── */
+
+.pokemon-showcase {
+    background: linear-gradient(135deg, rgba(80, 0, 80, 0.2) 0%, rgba(139, 0, 0, 0.3) 100%);
+    border: 2px solid rgba(218, 27, 27, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pokemon-showcase::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 30%, rgba(218, 27, 27, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(218, 27, 27, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(218, 27, 27, 0.8); }
+}
+
+.showcase-header h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.type {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.type-poison { background-color: #A040A0; color: white; }
+.type-dragon { background-color: #7038F8; color: white; }
+
+.showcase-image {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(139, 0, 139, 0.4) 0%, transparent 70%);
+    animation: imageGlow 3s ease-in-out infinite;
+}
+
+@keyframes imageGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.showcase-image img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(139, 0, 139, 0.6));
+}
+
+.showcase-image .status-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(218, 27, 27, 0.9);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.showcase-info {
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.showcase-desc strong {
+    color: var(--secondary-color);
+}
+
+.danger-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.danger-stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.danger-stat .label {
+    width: 80px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.danger-stat .bar {
+    flex: 1;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.danger-stat .bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), #ff6b6b);
+    border-radius: 4px;
+}
+
+.danger-stat .bar.bar-critical .fill {
+    background: linear-gradient(90deg, #ff0000, #ff4444);
+    animation: criticalPulse 1s ease-in-out infinite;
+}
+
+@keyframes criticalPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* ── Warning Banner ─────────────────────────────── */
+
+.boss-warning {
+    background: linear-gradient(90deg, rgba(139, 0, 0, 0.4) 0%, rgba(218, 27, 27, 0.3) 50%, rgba(139, 0, 0, 0.4) 100%);
+    border-top: 3px solid var(--secondary-color);
+    padding: 25px 80px;
+}
+
+.warning-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.warning-content i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+    animation: warningShake 0.5s ease-in-out infinite;
+}
+
+@keyframes warningShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.warning-content strong {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.warning-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 1100px) {
+    .boss-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .hero-portrait {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .hero-portrait img {
+        height: 300px;
+    }
+
+    .boss-name {
+        font-size: 3.5rem;
+    }
+
+    .boss-quote {
+        justify-content: center;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .boss-content {
+        padding: 40px;
+    }
+
+    .boss-warning {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .boss-hero {
+        padding: 30px 20px;
+    }
+
+    .boss-name {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .boss-title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-portrait img {
+        height: 220px;
+    }
+
+    .boss-stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        flex: 1 1 50%;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:nth-child(even) {
+        border-right: none;
+    }
+
+    .boss-content {
+        padding: 30px 20px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+    .pokemon-showcase {
+        padding: 20px;
+    }
+
+    .showcase-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .boss-warning {
+        padding: 20px;
+    }
+
+    .warning-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }

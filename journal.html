@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Accueil - Projet R</title>
+        <title>Journal des méfaits - Projet R</title>
         <link rel="stylesheet" href="./static/styles/styles.css">
         <link rel="stylesheet" href="./static/styles/header.css">
         <link rel="stylesheet" href="./static/styles/journal.css">
@@ -46,23 +46,417 @@
         </div>
 
         <main>
-            <div id="listeMefaits">
-                <article class="mefait">
-                    <h2>Vol de Pokémon rares</h2>
-                    <p>La Team Rocket est connue pour voler des Pokémon rares et puissants afin de les utiliser à des fins malveillantes.</p>
-                </article>
-                <article class="mefait">
-                    <h2>Extorsion de dresseurs</h2>
-                    <p>Ils extorquent de l'argent aux dresseurs en échange de la sécurité de leurs Pokémon ou de la restitution de ceux qui ont été volés.</p>
-                </article>
-                <article class="mefait">
-                    <h2>Expériences illégales</h2>
-                    <p>La Team Rocket mène des expériences illégales sur les Pokémon pour tenter de créer des créatures plus puissantes ou de contrôler les Pokémon à distance.</p>
-                </article>
-                <article class="mefait">
-                    <h2>Sabotage de centres Pokémon</h2>
-                    <p>Ils sabotent les centres Pokémon pour empêcher les dresseurs de soigner leurs Pokémon et pour semer le chaos dans la région de Kanto.</p>
-                </article>
+            <div class="journal-wrapper" id="journal-top">
+                <div class="title">
+                    <h1>Leurs Méfaits</h1>
+                </div>
+                <section class="journal-container">
+
+                    <!-- ══ LISTE ══════════════════════════════════ -->
+                    <div class="journal-list">
+                        <a href="#mefait-1" class="entry entry-critical">
+                            <div class="entry-thumbnail"></div>
+                            <p class="entry-title">ALERTE MAXIMALE : Ethernatos a disparu. Le Pokémon de l'apocalypse serait aux mains de Giovanni.</p>
+                            <div class="entry-tags">
+                                <span class="tag tag-red">URGENT</span>
+                                <span class="tag tag-purple">Catastrophe</span>
+                                <span class="tag tag-gold">Kanto</span>
+                            </div>
+                        </a>
+                        <a href="#mefait-2" class="entry">
+                            <div class="entry-thumbnail"></div>
+                            <p class="entry-title">Miaouss Gigamax : le nouveau chef de terrain de la Team Rocket terrorise la région.</p>
+                            <div class="entry-tags">
+                                <span class="tag tag-gold">Hiérarchie</span>
+                                <span class="tag tag-purple">Menace</span>
+                                <span class="tag tag-red">+3</span>
+                            </div>
+                        </a>
+                        <a href="#mefait-3" class="entry">
+                            <div class="entry-thumbnail"></div>
+                            <p class="entry-title">Pokémon légendaires capturés : Giratina et Yveltal aux mains de Jessie et James.</p>
+                            <div class="entry-tags">
+                                <span class="tag tag-gold">Légendaires</span>
+                                <span class="tag tag-purple">Critique</span>
+                                <span class="tag tag-red">+2</span>
+                            </div>
+                        </a>
+                        <a href="#mefait-4" class="entry">
+                            <div class="entry-thumbnail"></div>
+                            <p class="entry-title">Branette et Sepiatroce : les nouveaux Pokémon Spectre et Ténèbres renforcent l'arsenal ennemi.</p>
+                            <div class="entry-tags">
+                                <span class="tag tag-gold">Arsenal</span>
+                                <span class="tag tag-purple">Ténèbres</span>
+                                <span class="tag tag-red">+1</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ══ DÉTAIL 1 — Disparition d'Ethernatos ════ -->
+                    <div class="mefait-detail" id="mefait-1">
+                        <a href="#journal-top" class="back-btn">
+                            <i class="bx bx-arrow-back"></i> Retour au journal
+                        </a>
+                        <div class="detail-header">
+                            <div class="detail-title-area">
+                                <h2>Disparition d'Ethernatos</h2>
+                                <div class="detail-meta">
+                                    <span class="severity-badge severity-catastrophe">Danger : CATASTROPHIQUE</span>
+                                    <span class="detail-date">Signalé le 18 Mars 2024 · Classifié Niveau S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-main">
+                                <p>Il y a trois semaines, une perturbation énergétique sans précédent a été détectée au-dessus de la région de Galar. Ethernatos, le Pokémon responsable du Darkest Day — une catastrophe ayant failli anéantir toute vie — a été aperçu pour la dernière fois avant de disparaître totalement des radars. Nos sources au sein de l'Interpol Pokémon confirment que Giovanni aurait orchestré sa capture.</p>
+                                <div class="detail-section">
+                                    <h3>Chronologie des événements</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-time"></i>
+                                            <span><strong>J-21 :</strong> Détection d'une anomalie énergétique massive dans le ciel de Galar. Ethernatos localisé brièvement.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-time"></i>
+                                            <span><strong>J-20 :</strong> Plusieurs agents Team Rocket repérés à Galar avec du matériel de capture avancé. Giovanni aperçu sur place.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-time"></i>
+                                            <span><strong>J-19 :</strong> Explosion d'énergie noire au-dessus de la Tour de Combat. Puis plus rien. Ethernatos a disparu.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-time"></i>
+                                            <span><strong>Aujourd'hui :</strong> Aucune trace d'Ethernatos. La Team Rocket se prépare à quelque chose de massif.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="detail-section">
+                                    <h3>Pourquoi c'est catastrophique</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-error-alt"></i>
+                                            <span><strong>Puissance destructrice :</strong> Ethernatos peut absorber l'énergie de toute une région et déclencher le Darkest Day — une apocalypse Pokémon.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-error-alt"></i>
+                                            <span><strong>Forme Infinimax :</strong> Sous sa forme ultime, Ethernatos devient une entité de destruction pure, incontrôlable même par son dresseur.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-error-alt"></i>
+                                            <span><strong>Type Poison/Dragon :</strong> Une combinaison mortelle qui le rend résistant à la plupart des attaques conventionnelles.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="detail-sidebar">
+                                <div class="sidebar-card">
+                                    <h3>Niveau de menace</h3>
+                                    <div class="sidebar-stat"><span>Classification</span><span class="danger">EXTINCTION</span></div>
+                                    <div class="sidebar-stat"><span>Statut</span><span>Disparu / Capturé</span></div>
+                                    <div class="sidebar-stat"><span>Dernier aperçu</span><span>Galar</span></div>
+                                    <div class="sidebar-stat"><span>Dresseur présumé</span><span class="danger">Giovanni</span></div>
+                                </div>
+                                <div class="sidebar-card">
+                                    <h3>Suspect principal</h3>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/giovanni.png" alt="Giovanni"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">Giovanni</span>
+                                            <span class="agent-role">Chef suprême — Menace S</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert-box alert-critical">
+                                    <i class="bx bx-error-circle"></i>
+                                    <span>PROTOCOLE OMÉGA ACTIVÉ. Toutes les forces de défense de Kanto sont en alerte maximale. Évacuation potentielle en cours de préparation.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ══ DÉTAIL 2 — Miaouss Gigamax ═══════════════ -->
+                    <div class="mefait-detail" id="mefait-2">
+                        <a href="#journal-top" class="back-btn">
+                            <i class="bx bx-arrow-back"></i> Retour au journal
+                        </a>
+                        <div class="detail-header">
+                            <div class="detail-title-area">
+                                <h2>Miaouss Gigamax : Le nouveau commandant</h2>
+                                <div class="detail-meta">
+                                    <span class="severity-badge severity-eleve">Danger : Élevé</span>
+                                    <span class="detail-date">Confirmé le 2 Fév. 2024 · Kanto</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-main">
+                                <p>La hiérarchie au sein du célèbre trio de la Team Rocket a radicalement changé. Miaouss, autrefois simple "mascotte parlante" et cerveau des plans farfelus, a obtenu la capacité de se transformer en Miaouss Gigamax. Cette évolution lui a conféré une puissance et une autorité sans précédent, faisant de lui le véritable chef de terrain — au-dessus de Jessie et James.</p>
+                                <div class="detail-section">
+                                    <h3>Changements observés</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-crown"></i>
+                                            <span><strong>Nouvelle hiérarchie :</strong> Miaouss commande désormais Jessie et James. Seul Giovanni reste au-dessus de lui.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-brain"></i>
+                                            <span><strong>Stratégies améliorées :</strong> Les plans sont devenus plus sophistiqués et dangereux. Le taux de réussite des opérations a augmenté de 340%.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-shield-x"></i>
+                                            <span><strong>Puissance brute :</strong> En forme Gigamax, Miaouss mesure plus de 30 mètres et peut écraser des bâtiments entiers.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-group"></i>
+                                            <span><strong>Obéissance totale :</strong> Jessie et James, autrefois indisciplinés, suivent désormais les ordres sans discuter.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="detail-section">
+                                    <h3>Capacités Gigamax</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-meteor"></i>
+                                            <span><strong>G-Max Pièces d'Or :</strong> Projette des pièces géantes qui infligent des dégâts massifs et confusent les adversaires.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-expand"></i>
+                                            <span><strong>Taille colossale :</strong> Peut atteindre 33 mètres de haut, dominant le champ de bataille.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-timer"></i>
+                                            <span><strong>Durée limitée :</strong> La forme Gigamax ne dure que quelques minutes, mais c'est suffisant pour causer des ravages.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="detail-sidebar">
+                                <div class="sidebar-card">
+                                    <h3>Statistiques</h3>
+                                    <div class="sidebar-stat"><span>Opérations réussies</span><span>+340%</span></div>
+                                    <div class="sidebar-stat"><span>Taille Gigamax</span><span>33 mètres</span></div>
+                                    <div class="sidebar-stat"><span>Rang actuel</span><span>Commandant terrain</span></div>
+                                    <div class="sidebar-stat"><span>Inventions créées</span><span>342 machines</span></div>
+                                </div>
+                                <div class="sidebar-card">
+                                    <h3>Le trio restructuré</h3>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/miaouss.png" alt="Miaouss"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">Miaouss Gigamax</span>
+                                            <span class="agent-role">Chef de terrain</span>
+                                        </div>
+                                    </div>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/jessie.png" alt="Jessie"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">Jessie</span>
+                                            <span class="agent-role">Sous les ordres de Miaouss</span>
+                                        </div>
+                                    </div>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/james.png" alt="James"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">James</span>
+                                            <span class="agent-role">Sous les ordres de Miaouss</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert-box">
+                                    <i class="bx bx-error-circle"></i>
+                                    <span>Ne jamais affronter Miaouss sous sa forme Gigamax. Évacuer immédiatement la zone et contacter l'Interpol.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ══ DÉTAIL 3 — Giratina et Yveltal ═══════════ -->
+                    <div class="mefait-detail" id="mefait-3">
+                        <a href="#journal-top" class="back-btn">
+                            <i class="bx bx-arrow-back"></i> Retour au journal
+                        </a>
+                        <div class="detail-header">
+                            <div class="detail-title-area">
+                                <h2>Légendaires capturés : Giratina & Yveltal</h2>
+                                <div class="detail-meta">
+                                    <span class="severity-badge severity-critique">Danger : Critique</span>
+                                    <span class="detail-date">Confirmé le 15 Jan. 2024 · Multi-régions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-main">
+                                <p>Dans une escalade terrifiante, Jessie et James ont réussi l'impensable : capturer deux Pokémon légendaires parmi les plus dangereux de l'univers. Giratina, le maître du Monde Distorsion, est désormais sous le contrôle de Jessie. James, quant à lui, commande Yveltal, le Pokémon de la Destruction capable d'absorber la force vitale de tout être vivant.</p>
+                                <div class="detail-section">
+                                    <h3>Giratina — Pokémon Renégat</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-ghost"></i>
+                                            <span><strong>Type :</strong> Spectre / Dragon — Une combinaison dévastatrice contre la plupart des équipes.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-planet"></i>
+                                            <span><strong>Monde Distorsion :</strong> Giratina peut ouvrir des portails vers une dimension parallèle où les lois de la physique n'existent plus.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-shield"></i>
+                                            <span><strong>Forme Origine :</strong> Dans le Monde Distorsion, Giratina prend une forme serpentine encore plus puissante.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-user"></i>
+                                            <span><strong>Dresseuse :</strong> Jessie — Comment elle a réussi à le capturer reste un mystère.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="detail-section">
+                                    <h3>Yveltal — Pokémon Destruction</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-moon"></i>
+                                            <span><strong>Type :</strong> Ténèbres / Vol — Immunité totale aux attaques Psy, résistance aux Spectres.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-skull"></i>
+                                            <span><strong>Aura Ténébreuse :</strong> Amplifie toutes les attaques Ténèbres, rendant chaque coup potentiellement fatal.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-heart"></i>
+                                            <span><strong>Mort Ailes :</strong> Peut absorber la force vitale de tous les êtres vivants dans un rayon de plusieurs kilomètres.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-user"></i>
+                                            <span><strong>Dresseur :</strong> James — Sa nature sensible contraste dangereusement avec la brutalité d'Yveltal.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="detail-sidebar">
+                                <div class="sidebar-card">
+                                    <h3>Niveau de menace</h3>
+                                    <div class="sidebar-stat"><span>Giratina</span><span class="danger">Niveau S</span></div>
+                                    <div class="sidebar-stat"><span>Yveltal</span><span class="danger">Niveau S</span></div>
+                                    <div class="sidebar-stat"><span>Combinés</span><span class="danger">APOCALYPTIQUE</span></div>
+                                    <div class="sidebar-stat"><span>Contre-type</span><span>Fée</span></div>
+                                </div>
+                                <div class="sidebar-card">
+                                    <h3>Dresseurs</h3>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/jessie.png" alt="Jessie"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">Jessie</span>
+                                            <span class="agent-role">Dresseuse de Giratina</span>
+                                        </div>
+                                    </div>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/james.png" alt="James"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">James</span>
+                                            <span class="agent-role">Dresseur d'Yveltal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert-box">
+                                    <i class="bx bx-error-circle"></i>
+                                    <span>Seuls des Pokémon de type Fée peuvent espérer contrer ces légendaires. Notre Équipe Ultime a été constituée en conséquence.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ══ DÉTAIL 4 — Branette et Sepiatroce ════════ -->
+                    <div class="mefait-detail" id="mefait-4">
+                        <a href="#journal-top" class="back-btn">
+                            <i class="bx bx-arrow-back"></i> Retour au journal
+                        </a>
+                        <div class="detail-header">
+                            <div class="detail-title-area">
+                                <h2>Arsenal renforcé : Branette & Sepiatroce</h2>
+                                <div class="detail-meta">
+                                    <span class="severity-badge severity-eleve">Danger : Élevé</span>
+                                    <span class="detail-date">Observé le 28 Déc. 2023 · Kanto</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-main">
+                                <p>En plus de leurs Pokémon légendaires, Jessie et James ont renforcé leur arsenal avec deux Pokémon de type Spectre et Ténèbres particulièrement vicieux. Branette, la poupée hantée par la vengeance, accompagne désormais Jessie. James dispose de Sepiatroce, un Pokémon Ténèbres/Psy capable de manipuler l'esprit de ses victimes.</p>
+                                <div class="detail-section">
+                                    <h3>Branette — La Poupée Maudite</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-ghost"></i>
+                                            <span><strong>Type :</strong> Spectre — Immunité aux attaques Normal et Combat.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-needle"></i>
+                                            <span><strong>Origine :</strong> Une poupée abandonnée, animée par une rancune intense envers celui qui l'a jetée.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-target-lock"></i>
+                                            <span><strong>Malédiction :</strong> Peut infliger des malédictions qui affaiblissent progressivement ses adversaires.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-bolt"></i>
+                                            <span><strong>Méga-Évolution :</strong> Branette peut méga-évoluer, décuplant sa puissance et sa rancœur.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="detail-section">
+                                    <h3>Sepiatroce — Le Manipulateur</h3>
+                                    <ul class="incident-list">
+                                        <li>
+                                            <i class="bx bx-moon"></i>
+                                            <span><strong>Type :</strong> Ténèbres / Psy — Combinaison rare offrant une grande polyvalence tactique.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-brain"></i>
+                                            <span><strong>Hypnose :</strong> Utilise la bioluminescence de ses tentacules pour hypnotiser ses proies.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-water"></i>
+                                            <span><strong>Encre noire :</strong> Projette une encre qui plonge la zone dans l'obscurité totale.</span>
+                                        </li>
+                                        <li>
+                                            <i class="bx bx-dizzy"></i>
+                                            <span><strong>Contrôle mental :</strong> Peut temporairement prendre le contrôle de Pokémon plus faibles.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="detail-sidebar">
+                                <div class="sidebar-card">
+                                    <h3>Arsenal actuel</h3>
+                                    <div class="sidebar-stat"><span>Jessie</span><span>Branette + Giratina</span></div>
+                                    <div class="sidebar-stat"><span>James</span><span>Sepiatroce + Yveltal</span></div>
+                                    <div class="sidebar-stat"><span>Miaouss</span><span>Lui-même (Gigamax)</span></div>
+                                    <div class="sidebar-stat"><span>Type dominant</span><span>Ténèbres / Spectre</span></div>
+                                </div>
+                                <div class="sidebar-card">
+                                    <h3>Propriétaires</h3>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/jessie.png" alt="Jessie"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">Jessie</span>
+                                            <span class="agent-role">Branette</span>
+                                        </div>
+                                    </div>
+                                    <div class="agent-item">
+                                        <div class="agent-avatar"><img src="./static/images/cards/james.png" alt="James"></div>
+                                        <div class="agent-info">
+                                            <span class="agent-name">James</span>
+                                            <span class="agent-role">Sepiatroce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert-box">
+                                    <i class="bx bx-error-circle"></i>
+                                    <span>L'équipe adverse est majoritairement Ténèbres/Spectre. Notre contre-stratégie repose sur le type Fée, super-efficace contre eux.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
             </div>
         </main>
     </body>
