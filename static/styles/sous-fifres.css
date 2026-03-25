@@ -10,6 +10,7 @@ main {
 
 .characters-wrapper {
     position: relative;
+    animation: slideLeft 2s ease;
 }
 
 .title {
@@ -35,6 +36,19 @@ main {
     background-color: rgb(61, 61, 92, .5);
     border: 10px solid var(--primary-color);
     border-left: 0;
+    width: calc(100vw - 70px);
+    overflow-x: auto;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .characters-container .characters-cards {
@@ -47,7 +61,7 @@ main {
 .characters-container .characters-cards .card {
     background-color: var(--background-color);
     border: 5px solid var(--primary-color);
-    padding: 20px;
+    padding: 15px;
     width: 380px;
     height: 480px;
     border-radius: 10px;
@@ -61,10 +75,10 @@ main {
 }
 
 .characters-container .characters-cards .card .card-image {
-    height: 200px;
-    min-height: 200px;
+    height: 160px;
+    min-height: 160px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -78,9 +92,10 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 8px;
+    gap: 6px;
     flex: 1;
-    overflow: hidden;
+    overflow: auto;
+    min-height: 0;
 }
 
 .card .content h2 {
@@ -90,7 +105,7 @@ main {
 }
 
 .card .content .role {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -99,9 +114,13 @@ main {
 
 .card .content .apercu {
     color: var(--text-color);
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.3;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card .content .details {
@@ -143,7 +162,7 @@ main {
 }
 
 .card .content .details .citation i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.2rem;
 }
 
@@ -176,7 +195,7 @@ main {
 
 .card .content .details .stats-grid .bar .fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+    background: linear-gradient(90deg, var(--secondary-color), #ff6b6b);
     border-radius: 4px;
 }
 
@@ -207,16 +226,16 @@ main {
 }
 
 .card .content .details .infos .info i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.1rem;
 }
 
 .card .content .details .infos .info strong {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .card .content .pokemons {
-    display: flex;
+    display: none;
     gap: 15px;
     margin-top: auto;
 }
@@ -242,6 +261,41 @@ main {
 .card .content .pokemons .pokemon-card span {
     color: var(--text-color);
     font-size: 0.7rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Pokémons visibles en aperçu (version compacte) */
+.card .content .pokemons-preview {
+    display: flex;
+    gap: 6px;
+    margin-top: auto;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-top: 8px;
+}
+
+.card .content .pokemons-preview .pokemon-mini {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card .content .pokemons-preview .pokemon-mini img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card .content .pokemons-preview .pokemon-mini span {
+    color: var(--text-color);
+    font-size: 0.55rem;
     text-align: center;
     opacity: 0.7;
 }
@@ -276,6 +330,14 @@ main {
     display: flex;
 }
 
+.characters-container .characters-cards .card:hover .content .pokemons-preview {
+    display: none;
+}
+
+.characters-container .characters-cards .card:hover .content .details .pokemons {
+    display: flex;
+}
+
 .characters-cards:has(.card:hover) .card:not(:hover) {
     width: 0;
     min-width: 0;
@@ -293,4 +355,246 @@ main {
 
 .characters-cards .card:not(:hover) {
     transition-delay: 0.1s;
+}
+
+/* ── Responsive ────────────────────────────────── */
+
+/* Réduction progressive des cartes */
+@media (max-width: 1400px) {
+    .characters-container .characters-cards {
+        min-width: calc(3 * 300px + 6 * 20px + 2 * 30px);
+        padding: 20px 30px;
+    }
+    .characters-container .characters-cards .card {
+        width: 300px;
+        height: 440px;
+        margin: 0 20px;
+    }
+    .characters-container .characters-cards .card .card-image {
+        height: 170px;
+        min-height: 170px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .characters-container .characters-cards {
+        min-width: calc(3 * 240px + 6 * 15px + 2 * 20px);
+        padding: 15px 20px;
+    }
+    .characters-container .characters-cards .card {
+        width: 240px;
+        height: 400px;
+        margin: 0 15px;
+    }
+    .characters-container .characters-cards .card .card-image {
+        height: 140px;
+        min-height: 140px;
+    }
+    .card .content h2 { font-size: 1.2rem; }
+    .card .content .apercu { font-size: 0.82rem; }
+}
+
+/* Layout vertical sous 900px */
+@media (max-width: 900px) {
+    main {
+        padding-top: 60px;
+        align-items: flex-start;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .characters-wrapper {
+        width: 100%;
+        animation: none;
+    }
+
+    .characters-container {
+        width: 100%;
+        border: none;
+        border-top: 5px solid var(--primary-color);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .characters-container .characters-cards {
+        flex-direction: column;
+        min-width: 0;
+        padding: 15px;
+        gap: 15px;
+        overflow-x: hidden;
+    }
+
+    .characters-container .characters-cards .card {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        transition: all 0.4s ease;
+    }
+
+    .characters-container .characters-cards .card .card-image {
+        width: 100%;
+        min-width: 100%;
+        height: 150px;
+        min-height: 150px;
+        margin-bottom: 0;
+    }
+
+    .card .content {
+        text-align: center;
+        padding: 15px;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+
+    .card .content .apercu {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+
+    .card .content .pokemons-preview {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .card .content .details {
+        display: none;
+    }
+
+    /* Au focus/active, la carte s'étend verticalement */
+    .characters-container .characters-cards .card:focus-within,
+    .characters-container .characters-cards .card:active,
+    .characters-container .characters-cards .card.expanded {
+        flex-direction: column;
+    }
+
+    .characters-container .characters-cards .card:focus-within .content .apercu,
+    .characters-container .characters-cards .card:focus-within .content .pokemons-preview {
+        display: none;
+    }
+
+    .characters-container .characters-cards .card:focus-within .content .details {
+        display: flex;
+        text-align: left;
+    }
+
+    .characters-container .characters-cards .card:focus-within .content .details .pokemons {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Désactiver les effets hover desktop */
+    .characters-container .characters-cards .card:hover {
+        flex-grow: 0;
+        flex-direction: column;
+    }
+
+    .characters-container .characters-cards .card:hover .card-image {
+        width: 100%;
+        min-width: 100%;
+        height: 150px;
+        min-height: 150px;
+    }
+
+    .characters-container .characters-cards .card:hover .content h2,
+    .characters-container .characters-cards .card:hover .content .role,
+    .characters-container .characters-cards .card:hover .content .apercu {
+        display: block;
+    }
+
+    .characters-container .characters-cards .card:hover .content .details {
+        display: none;
+    }
+
+    .characters-container .characters-cards .card:hover .content .pokemons-preview {
+        display: flex;
+    }
+
+    .characters-cards:has(.card:hover) .card:not(:hover),
+    .characters-cards:has(.card:focus-within) .card:not(:focus-within) {
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+        border: 5px solid var(--primary-color);
+        opacity: 1;
+        margin: 0;
+        pointer-events: auto;
+    }
+}
+
+/* Mobile - cartes cliquables avec expansion */
+@media (max-width: 600px) {
+    .characters-container {
+        padding: 10px;
+    }
+
+    .characters-container .characters-cards {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .characters-container .characters-cards .card {
+        padding: 0;
+    }
+
+    .characters-container .characters-cards .card .card-image {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .card .content {
+        padding: 12px;
+        gap: 6px;
+    }
+
+    .card .content h2 {
+        font-size: 1.1rem;
+    }
+
+    .card .content .role {
+        font-size: 0.75rem;
+    }
+
+    .card .content .apercu {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .card .content .pokemons-preview .pokemon-mini {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Détails en mode mobile */
+    .card .content .details {
+        gap: 12px;
+    }
+
+    .card .content .details .citation {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+
+    .card .content .details p {
+        font-size: 0.8rem;
+    }
+
+    .card .content .details .infos {
+        padding: 10px;
+    }
+
+    .card .content .details .infos .info {
+        font-size: 0.75rem;
+    }
+
+    .card .content .details .pokemons .pokemon-card {
+        width: 60px;
+        height: 60px;
+    }
 }

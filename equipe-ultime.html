@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L'Équipe Ultime - Projet R</title>
+        <link rel="stylesheet" href="./static/styles/styles.css">
+        <link rel="stylesheet" href="./static/styles/header.css">
+        <link rel="stylesheet" href="./static/styles/equipe-ultime.css">
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <div class="nav-left">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Les malfaiteurs
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./chef.html">Le chef</a></li>
+                            <li><a href="./sous-fifres.html">Les sous-fifres</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Leurs méfaits
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./journal.html">Journal</a></li>
+                            <li><a href="./signaler-mefait.html">Signaler un méfait</a></li>
+                            <li><a href="./carte-kanto.html">Carte de Kanto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/" class="nav-logo">
+                    <img src="./static/images/logo.png" alt="Logo" class="logo">
+                </a>
+                <div class="nav-right">
+                    <a href="./recompenses.html" class="nav-btn">Récompenses</a>
+                    <a href="./equipe-ultime.html" class="nav-btn nav-cta">L'équipe ultime</a>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="team-page">
+                <!-- Hero Section -->
+                <section class="team-hero">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <div class="hope-indicator">
+                            <span class="hope-pulse"></span>
+                            <span class="hope-text">DERNIÈRE LIGNE DE DÉFENSE</span>
+                        </div>
+                        <h1 class="team-name">L'ÉQUIPE ULTIME</h1>
+                        <p class="team-subtitle">Six Pokémon d'exception pour sauver Kanto</p>
+                        <p class="team-desc">Face à la menace des Ténèbres et des Spectres de la Team Rocket, le Professeur Chen a assemblé une équipe de type <strong>Fée</strong> — le seul type capable de résister et de contre-attaquer efficacement.</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Pokémon</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Type Fée</span>
+                        </div>
+                        <div class="stat-box stat-highlight">
+                            <span class="stat-number">★★★★★</span>
+                            <span class="stat-label">Puissance</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Type Advantage Banner -->
+                <section class="type-banner">
+                    <div class="type-info">
+                        <i class="bx bx-shield-quarter"></i>
+                        <span><strong>Type Fée</strong> est super efficace contre <strong>Ténèbres</strong> et <strong>Dragon</strong> — les types principaux de Giratina, Yveltal, et Ethernatos.</span>
+                    </div>
+                </section>
+
+                <!-- Pokemon Grid -->
+                <section class="team-grid-section">
+                    <div class="pokemon-grid">
+
+                        <!-- Zacian - Leader -->
+                        <div class="pokemon-card card-leader">
+                            <div class="card-badge">LEADER</div>
+                            <div class="card-glow glow--fairy"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/zacian.png" alt="Zacian">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Zacian</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-fairy">Fée</span>
+                                </div>
+                                <p class="pokemon-role">Épée sacrée</p>
+                                <p class="pokemon-desc">Héros de nombreuses batailles, Zacian brandit une épée forgée de lumière pure. Sa vitesse légendaire lui permet de frapper avant même que l'adversaire ne réalise le danger. Il est notre meilleur atout contre Ethernatos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mega Gardevoir -->
+                        <div class="pokemon-card">
+                            <div class="card-glow glow--psychic-fairy"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/gardevoir.png" alt="Mega Gardevoir">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Mega Gardevoir</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-psychic">Psy</span>
+                                    <span class="type type-fairy">Fée</span>
+                                </div>
+                                <p class="pokemon-role">Protectrice dévouée</p>
+                                <p class="pokemon-desc">Sa loyauté absolue envers son dresseur se transforme en puissance Méga. Gardevoir est capable de créer un trou noir pour protéger ceux qu'elle aime, au péril de sa propre existence.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mega Diancie -->
+                        <div class="pokemon-card">
+                            <div class="card-glow glow--rock-fairy"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/diancie.png" alt="Mega Diancie">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Mega Diancie</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-rock">Roche</span>
+                                    <span class="type type-fairy">Fée</span>
+                                </div>
+                                <p class="pokemon-role">Beauté dévastatrice</p>
+                                <p class="pokemon-desc">Sous sa forme Méga, Diancie transcende sa beauté en puissance brute. Ses diamants coupent à travers les ténèbres de Yveltal comme des lames de lumière.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mega Magearna -->
+                        <div class="pokemon-card">
+                            <div class="card-glow glow--steel-fairy"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/magherna.png" alt="Magearna">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Magearna</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-steel">Acier</span>
+                                    <span class="type type-fairy">Fée</span>
+                                </div>
+                                <p class="pokemon-role">Gardienne de l'équipe</p>
+                                <p class="pokemon-desc">Maîtresse de l'Âme-Cœur, Magearna absorbe les émotions de ses alliés et les convertit en énergie protectrice. Sa résistance Acier la rend quasi invulnérable aux poisons d'Ethernatos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mimiqui -->
+                        <div class="pokemon-card">
+                            <div class="card-glow glow--ghost-fairy"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/mimiqui.png" alt="Mimiqui">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Mimiqui</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-ghost">Spectre</span>
+                                    <span class="type type-fairy">Fée</span>
+                                </div>
+                                <p class="pokemon-role">Fantôme insaisissable</p>
+                                <p class="pokemon-desc">Dissimulé sous son déguisement, Mimiqui peut encaisser un coup fatal grâce à son costume magique. Son type Spectre lui permet d'affronter Giratina sur son propre terrain.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pikachu -->
+                        <div class="pokemon-card">
+                            <div class="card-glow glow--electric"></div>
+                            <div class="card-image">
+                                <img src="./static/images/pokemons/ally/pikachu.png" alt="Pikachu Casquette Kanto">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="pokemon-name">Pikachu Casquette</h3>
+                                <div class="pokemon-types">
+                                    <span class="type type-electric">Électrik</span>
+                                </div>
+                                <p class="pokemon-role">Mascotte de légende</p>
+                                <p class="pokemon-desc">Portant la casquette originale de Kanto, ce Pikachu légendaire incarne l'esprit des origines. Sa foudre porte l'histoire de toute la région et sa détermination est sans limite.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Mission Banner -->
+                <section class="mission-banner">
+                    <div class="mission-content">
+                        <i class="bx bx-target-lock"></i>
+                        <div>
+                            <strong>MISSION : PROTÉGER KANTO</strong>
+                            <p>Cette équipe constitue la dernière ligne de défense contre les opérations de la Team Rocket. Leur complémentarité tactique et leur type Fée dominant leur confère une résistance naturelle aux attaques Ténèbres et Dragon privilégiées par Giovanni, Jessie et James.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

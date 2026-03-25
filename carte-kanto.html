@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carte de Kanto - Projet R</title>
+        <link rel="stylesheet" href="./static/styles/styles.css">
+        <link rel="stylesheet" href="./static/styles/header.css">
+        <link rel="stylesheet" href="./static/styles/carte-kanto.css">
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <div class="nav-left">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Les malfaiteurs
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./chef.html">Le chef</a></li>
+                            <li><a href="./sous-fifres.html">Les sous-fifres</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            Leurs méfaits
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul>
+                            <li><a href="./journal.html">Journal</a></li>
+                            <li><a href="./signaler-mefait.html">Signaler un méfait</a></li>
+                            <li><a href="./carte-kanto.html">Carte de Kanto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/" class="nav-logo">
+                    <img src="./static/images/logo.png" alt="Logo" class="logo">
+                </a>
+                <div class="nav-right">
+                    <a href="./recompenses.html" class="nav-btn">Récompenses</a>
+                    <a href="./equipe-ultime.html" class="nav-btn nav-cta">L'équipe ultime</a>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="map-wrapper" id="map-top">
+                <div class="title">
+                    <h1>Carte de Kanto</h1>
+                </div>
+                <section class="map-container">
+
+                    <!-- Image de fond — remplacer par ./static/images/kanto-map.png -->
+                    <img src="./static/images/kanto-map.png" alt="Carte de Kanto" class="map-bg">
+                    <div class="map-overlay"></div>
+
+                    <!-- ══ MARQUEURS ══════════════════════════════ -->
+                    <div class="markers">
+
+                        <!-- Jadielle Ville — QG Giovanni -->
+                        <div class="marker tip-right marker-boss" style="left: 26%; top: 72%">
+                            <div class="marker-dot dot-purple"></div>
+                            <div class="marker-card card-boss">
+                                <h4><i class="bx bx-crown"></i> Jadielle Ville</h4>
+                                <p><strong>Arène de Giovanni.</strong> Le champion d'arène cache sa véritable identité de chef de la Team Rocket. Centre de commandement principal. Ethernatos serait détenu ici.</p>
+                                <span class="status-badge status-confirme">QG Principal</span>
+                            </div>
+                        </div>
+
+                        <!-- Cramois'Île — Labo Mewtwo -->
+                        <div class="marker tip-right" style="left: 22%; top: 88%">
+                            <div class="marker-dot dot-purple"></div>
+                            <div class="marker-card">
+                                <h4>Cramois'Île</h4>
+                                <p><strong>Ancien laboratoire du Projet Mewtwo.</strong> Partiellement détruit lors de l'évasion de Mewtwo. Des expériences continuent dans les sous-sols.</p>
+                                <span class="status-badge status-confirme">Base scientifique</span>
+                            </div>
+                        </div>
+
+                        <!-- Céladopole — Casino -->
+                        <div class="marker" style="left: 40%; top: 50%">
+                            <div class="marker-dot dot-red"></div>
+                            <div class="marker-card">
+                                <h4>Céladopole</h4>
+                                <p><strong>Casino clandestin.</strong> Façade légale pour le blanchiment d'argent. Accès secret vers une base souterraine. Miaouss Gigamax y a été aperçu récemment.</p>
+                                <span class="status-badge status-actif">Activité intense</span>
+                            </div>
+                        </div>
+
+                        <!-- Safrania — Tour Silph -->
+                        <div class="marker" style="left: 54%; top: 50%">
+                            <div class="marker-dot dot-red"></div>
+                            <div class="marker-card">
+                                <h4>Safrania</h4>
+                                <p><strong>Tour Silph sous surveillance.</strong> Giovanni a tenté de voler la Master Ball. Des agents infiltrés dans l'entreprise surveillent les nouvelles technologies.</p>
+                                <span class="status-badge status-actif">Infiltration active</span>
+                            </div>
+                        </div>
+
+                        <!-- Azuria — Grotte Mewtwo -->
+                        <div class="marker tip-bottom" style="left: 54%; top: 24%">
+                            <div class="marker-dot dot-red"></div>
+                            <div class="marker-card">
+                                <h4>Azuria</h4>
+                                <p><strong>Grotte Azurée.</strong> Dernier repaire connu de Mewtwo. La Team Rocket tente de le recapturer. Jessie et James ont été vus dans les environs avec Giratina.</p>
+                                <span class="status-badge status-actif">Opération en cours</span>
+                            </div>
+                        </div>
+
+                        <!-- Carminha -->
+                        <div class="marker tip-right" style="left: 20%; top: 38%">
+                            <div class="marker-dot dot-gold"></div>
+                            <div class="marker-card">
+                                <h4>Carminha</h4>
+                                <p><strong>Point de recrutement.</strong> Des agents approchent les dresseurs débutants. Proposition de "partenariat" suspecté d'être du recrutement forcé.</p>
+                                <span class="status-badge status-suspecte">Recrutement</span>
+                            </div>
+                        </div>
+
+                        <!-- Lavanville — Tour Pokémon -->
+                        <div class="marker" style="left: 68%; top: 50%">
+                            <div class="marker-dot dot-gold"></div>
+                            <div class="marker-card">
+                                <h4>Lavanville</h4>
+                                <p><strong>Tour Pokémon.</strong> Branette (Pokémon de Jessie) a été créée ici selon nos sources. Des perturbations spectrales anormales détectées.</p>
+                                <span class="status-badge status-suspecte">Activité spectrale</span>
+                            </div>
+                        </div>
+
+                        <!-- Argenta -->
+                        <div class="marker" style="left: 54%; top: 64%">
+                            <div class="marker-dot dot-gold"></div>
+                            <div class="marker-card">
+                                <h4>Argenta</h4>
+                                <p><strong>Port de contrebande.</strong> James utilise le ferry pour transporter Sepiatroce et des Pokémon volés vers d'autres régions.</p>
+                                <span class="status-badge status-suspecte">Trafic maritime</span>
+                            </div>
+                        </div>
+
+                        <!-- Route 24 — Apparition Yveltal -->
+                        <div class="marker tip-bottom" style="left: 45%; top: 20%">
+                            <div class="marker-dot dot-red"></div>
+                            <div class="marker-card">
+                                <h4>Route 24</h4>
+                                <p><strong>ALERTE : Yveltal aperçu.</strong> Le Pokémon de la Destruction de James a été vu absorbant l'énergie vitale de la végétation. Zone à éviter absolument.</p>
+                                <span class="status-badge status-actif">DANGER MORTEL</span>
+                            </div>
+                        </div>
+
+                        <!-- Carmin sur Mer -->
+                        <div class="marker" style="left: 40%; top: 74%">
+                            <div class="marker-dot dot-gray"></div>
+                            <div class="marker-card">
+                                <h4>Carmin sur Mer</h4>
+                                <p><strong>Base neutralisée.</strong> Ancienne planque démantelée par l'Interpol. Mais attention : des agents pourraient revenir.</p>
+                                <span class="status-badge status-inactif">Neutralisé</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- ══ FIN MARQUEURS ══════════════════════════ -->
+
+                    <!-- Légende -->
+                    <div class="map-legend">
+                        <div class="legend-title">Légende</div>
+                        <div class="legend-item">
+                            <span class="legend-dot dot-red"></span> Activité active
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot dot-gold"></span> Activité suspecte
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot dot-purple"></span> Base confirmée
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot dot-gray"></span> Neutralisé
+                        </div>
+                    </div>
+
+                    <!-- Barre de statut -->
+                    <div class="map-statusbar">
+                        <div class="statusbar-item">
+                            <i class="bx bx-error-circle red"></i>
+                            <span><strong>4</strong> incidents actifs</span>
+                        </div>
+                        <div class="statusbar-item">
+                            <i class="bx bx-search-alt gold"></i>
+                            <span><strong>3</strong> zones suspectes</span>
+                        </div>
+                        <div class="statusbar-item">
+                            <i class="bx bx-building purple"></i>
+                            <span><strong>2</strong> bases confirmées</span>
+                        </div>
+                        <div class="statusbar-item">
+                            <i class="bx bx-ghost red"></i>
+                            <span><strong>Yveltal</strong> aperçu</span>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
