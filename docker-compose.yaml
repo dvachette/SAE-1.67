@@ -1,5 +1,5 @@
 services:
-  projetR:
+  projetr:
     build: .
     ports:
       - "127.0.0.1:3002:80"
