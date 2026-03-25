@@ -1,0 +1,23 @@
+name: Deploy projet R
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: debian
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /home/debian/SAE-1.67
+            git pull
+            docker compose up -d --build
