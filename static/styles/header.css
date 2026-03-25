@@ -125,6 +125,31 @@
     transform: right;
 }
 
+/* CTA Button */
+.nav-btn.nav-cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4444 100%);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    animation: ctaGlow 2s ease-in-out infinite;
+}
+
+.nav-btn.nav-cta::before {
+    display: none;
+}
+
+.nav-btn.nav-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(218, 27, 27, 0.5);
+}
+
+@keyframes ctaGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(218, 27, 27, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(218, 27, 27, 0.6); }
+}
+
 /* ── Responsive ─────────────────────────────────── */
 
 @media (max-width: 900px) {
